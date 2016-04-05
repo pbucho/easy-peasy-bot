@@ -85,8 +85,15 @@ controller.on('bot_channel_join', function (bot, message) {
     bot.reply(message, "I'm here!")
 });
 
-controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello!');
+controller.hears('rand', ['direct_mention', 'mention', 'direct_message'], function (bot, message) {
+
+	var frases = ["slack", "amaral", "içu"];
+
+	var rand = Math.floor((Math.random() * 2) + 1);
+
+    bot.reply(message, frases[rand]);
+    
+    console.log(new Date() + " " + frases[rand]);
 });
 
 
