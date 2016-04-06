@@ -85,6 +85,13 @@ controller.on('bot_channel_join', function (bot, message) {
     bot.reply(message, "I'm here!")
 });
 
+controller.hears(['hello','hi','greetings'],'ambient',function(bot,message){
+	bot.reply(message,"Hello, Andre is not yet here, but Carlao will be over anytime soon");
+}
+controller.hears(['Andre','andre'],'ambient',function(bot,message){
+	bot.reply(message,"Andre??, last time i saw him he was meeting Carlao, if you know what i mean :heart:");
+}
+
 controller.hears('rand', ['direct_mention', 'mention', 'direct_message'], function (bot, message) {
 
 	var frases = ["slack", "amaral", "içu"];
