@@ -86,16 +86,27 @@ controller.on('bot_channel_join', function (bot, message) {
 });
 
 controller.hears('rand', ['direct_mention', 'mention', 'direct_message'], function (bot, message) {
-
 	var frases = ["slack", "amaral", "içu"];
-
-	var rand = Math.floor((Math.random() * 2) + 1);
-
+	var rand = Math.floor((Math.random() * 2) + 0);
     bot.reply(message, frases[rand]);
-    
-    console.log(new Date() + " " + frases[rand]);
+    console.log(frases[rand]);
 });
 
+controller.hears('batatas',['direct_mention', 'mention', 'direct_message'], function (bot, message) {
+	bot.reply(message, 'fritas!');
+});
+
+controller.hears(['pestana', 'ams'],['direct_mention', 'mention', 'direct_message'], function (bot, message) {
+	var frases = [
+		"the system must accept 5 and 10 bi.. money",
+		"you could do it, but if u are not allowded u are not allowded",
+		"this is my chafarica",
+		"whats meaning putting them together?",
+		"you are a rocket science"
+	];
+	var rand = Math.floor((Math.random() * 5) + 0);
+    bot.reply(message, frases[rand]);
+});
 
 /**
  * AN example of what could be:
