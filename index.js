@@ -95,9 +95,8 @@ controller.hears(['Andre','andre'],'ambient',function(bot,message){
 
 controller.hears('rand', ['direct_mention', 'mention', 'direct_message'], function (bot, message) {
 	var frases = ["slack", "amaral", "içu"];
-	var rand = Math.floor((Math.random() * 2) + 0);
+	var rand = Math.floor((Math.random() * 3) + 0);
     bot.reply(message, frases[rand]);
-    console.log(frases[rand]);
 });
 
 controller.hears('batatas',['direct_mention', 'mention', 'direct_message'], function (bot, message) {
