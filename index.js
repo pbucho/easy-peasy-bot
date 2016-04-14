@@ -103,6 +103,14 @@ controller.hears('batatas',['direct_mention', 'mention', 'direct_message'], func
 	bot.reply(message, 'fritas!');
 });
 
+controller.hears('sd',['direct_mention', 'mention', 'direct_message'], function (bot, message) {
+	bot.reply(message, 'SD TÁ LINDO! :+1:');
+});
+
+controller.hears(['comp','compiladores'],['direct_mention', 'mention', 'direct_message'], function (bot, message) {
+	bot.reply(message, 'COMPILADORES TÃO LINDOS! :+1:');
+});
+
 controller.hears(['pestana', 'ams'],['direct_mention', 'mention', 'direct_message'], function (bot, message) {
 	var frases = [
 		"the system must accept 5 and 10 bi.. money",
