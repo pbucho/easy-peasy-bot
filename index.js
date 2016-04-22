@@ -103,13 +103,13 @@ controller.hears('batatas',['direct_mention', 'mention', 'direct_message'], func
 	bot.reply(message, 'fritas!');
 });
 
-controller.hears('sd',['direct_mention', 'mention', 'direct_message'], function (bot, message) {
-	bot.reply(message, 'SD TÁ LINDO! :+1:');
+controller.hears(
+	['projecto','projeto','git','commit','pull','push','branch','merge','jenkins','test','slack','fuck'],
+	'ambient',function(bot,message){
+	bot.reply(message,"FLIP DA TABLE");
+	bot.reply(message,"http://www.timeanddate.com/countdown/party?iso=20160527T14&p0=133&msg=fuck+everything&ud=1&font=cursive&csz=1");
 });
 
-controller.hears(['comp','compiladores'],['direct_mention', 'mention', 'direct_message'], function (bot, message) {
-	bot.reply(message, 'COMPILADORES TÃO LINDOS! :+1:');
-});
 
 controller.hears(['pestana', 'ams'],['direct_mention', 'mention', 'direct_message'], function (bot, message) {
 	var frases = [
