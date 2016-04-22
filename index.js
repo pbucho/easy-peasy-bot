@@ -85,8 +85,8 @@ controller.on('bot_channel_join', function (bot, message) {
     bot.reply(message, "I'm here!")
 });
 
-controller.hears(['hello','hi','greetings'],'ambient',function(bot,message){
-	bot.reply(message,"Hello, Andre is not yet here, but Carlao will be over anytime soon");
+controller.hears(['hello'],'ambient',function(bot,message){
+	bot.reply(message,"It's me");
 });
 
 controller.hears(['Andre','andre'],'ambient',function(bot,message){
